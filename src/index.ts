@@ -20,38 +20,119 @@ export interface Env {
   // Example binding to R2. Learn more at https://developers.cloudflare.com/workers/runtime-apis/r2/
   // MY_BUCKET: R2Bucket;
 }
-const ___ = undefined;
 
-const READ_KEY = "fc8101a7-3914-4429-bd54-c7113f4d0671";
+// https://coda.io/d/Bullet-Journal_dZ73AjdCK_A/PreRoll_suvWE#Plex-preroll-types_tuZW9/r2
 
-const Authorization = `Bearer ${READ_KEY}`;
+const PREROLL_STRINGS = [
+  {
+    startMonth: 12,
+    startDay: 26,
+    endMonth: 1,
+    endDay: 2,
+    list: "/storage/5BC3-F5E6/Prerroll/Gatsby Happy New Year Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Glitter Santa Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Glitter Tree Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Melting Snow Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Magic Snow_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Snowflakes Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Snowman Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Forest LoFi Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Ice Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter is Coming Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Snow Plex Pre-roll_1440_H264.mp4;/storage/5BC3-F5E6/Prerroll/Gatsby Happy New Year Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Glitter Santa Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Glitter Tree Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Melting Snow Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Magic Snow_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Snowflakes Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Snowman Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Forest LoFi Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Ice Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter is Coming Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Snow Plex Pre-roll_1440_H264.mp4;/storage/5BC3-F5E6/Prerroll/TV Glitch Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/COVID-19 Google Stay the Fuck Home Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Liquid Glitch Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/Monkey Island Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Up Movie Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Monkey Island Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/TV Glitch Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Retro VHS Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Disney Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/COVID-19 Google Stay the Fuck Home Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Piracy. It's a crime. Universal Pre-roll_1080_H264;/storage/5BC3-F5E6/Prerroll/Cartoon Ink Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Liquid Glitch Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/Monkey Island Plex Pre-roll_1080_H264.mp4",
+  },
+  {
+    startMonth: 1,
+    startDay: 3,
+    endMonth: 2,
+    endDay: 14,
+    list: "/storage/5BC3-F5E6/Prerroll/Melting Snow Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Magic Snow_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Forest LoFi Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Ice Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter is Coming Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Snow Plex Pre-roll_1440_H264.mp4;/storage/5BC3-F5E6/Prerroll/Melting Snow Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Magic Snow_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Forest LoFi Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Ice Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter is Coming Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Snow Plex Pre-roll_1440_H264.mp4;/storage/5BC3-F5E6/Prerroll/Melting Snow Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Magic Snow_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Forest LoFi Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Ice Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter is Coming Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Snow Plex Pre-roll_1440_H264.mp4;/storage/5BC3-F5E6/Prerroll/Disney Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/DVD Feature Presentation Universal Pre-roll_480_H264.mp4;/storage/5BC3-F5E6/Prerroll/Disney Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Uber VHS Style Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Liquid Glitch Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/THX Deep Note.mp4;/storage/5BC3-F5E6/Prerroll/Shape Filling Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Developer Coding Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex McDonalds Preroll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Disney Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/THX Deep Note.mp4;/storage/5BC3-F5E6/Prerroll/Old Theater Film Intro Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Outrun Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Old Theater Film Intro Plex Pre-roll_720_H264.mp4",
+  },
+  {
+    startMonth: 2,
+    startDay: 14,
+    endMonth: 2,
+    endDay: 15,
+    list: "/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Valentines Hearts Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Marvel V2 Shortened Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/THX Deep Note.mp4;/storage/5BC3-F5E6/Prerroll/Retro VHS Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/HBO Static Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Piracy. It's a crime. Universal Pre-roll_1080_H264;/storage/5BC3-F5E6/Prerroll/Plex Hulu Originals_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Cartoon Ink Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Old Theater Film Intro Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Monkey Island Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/TV Glitch Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/HBO Static Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/21st Century Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Uber VHS Style Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Vibrant Plex Pre-Roll_1080_H264.mp4",
+  },
+  {
+    startMonth: 2,
+    startDay: 15,
+    endMonth: 5,
+    endDay: 31,
+    list: "/storage/5BC3-F5E6/Prerroll/Blooming Flower Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Dancing Butterflies Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Flower Field Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Growing Grass Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Spring Brush Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Summer Splash Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Blooming Flower Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Dancing Butterflies Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Flower Field Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Growing Grass Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Spring Brush Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Summer Splash Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Blooming Flower Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Dancing Butterflies Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Flower Field Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Growing Grass Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Spring Brush Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Summer Splash Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/THX Deep Note.mp4;/storage/5BC3-F5E6/Prerroll/HBO Static Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Old Theater Film Intro Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Retro VHS Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Marvel V2 Shortened Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/THX Deep Note.mp4;/storage/5BC3-F5E6/Prerroll/Shape Filling Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Studios_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/THX Deep Note.mp4;/storage/5BC3-F5E6/Prerroll/DVD Feature Presentation Universal Pre-roll_480_H264.mp4;/storage/5BC3-F5E6/Prerroll/Retro VHS Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/DVD Feature Presentation Universal Pre-roll_480_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Studios_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/THX Deep Note.mp4",
+  },
+  {
+    startMonth: 6,
+    startDay: 1,
+    endMonth: 6,
+    endDay: 30,
+    list: "/storage/5BC3-F5E6/Prerroll/Netflix Colorful Lines Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Pride 1080p.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Colorful Lines Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Pride 1080p.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Colorful Lines Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Pride 1080p.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Colorful Lines Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Pride 1080p.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Colorful Lines Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Pride 1080p.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Colorful Lines Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Pride 1080p.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Colorful Lines Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Netflix Pride 1080p.mp4;/storage/5BC3-F5E6/Prerroll/Disney Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/21st Century Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Piracy. It's a crime. Universal Pre-roll_1080_H264;/storage/5BC3-F5E6/Prerroll/COVID-19 Google Stay the Fuck Home Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Cartoon Ink Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Retro VHS Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Marvel V2 Shortened Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Outrun Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Liquid Glitch Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/21st Century Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Retro VHS Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/COVID-19 Google Stay the Fuck Home Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/COVID-19 Google Stay the Fuck Home Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Studios_1080_H264.mp4",
+  },
+  {
+    startMonth: 7,
+    startDay: 1,
+    endMonth: 8,
+    endDay: 31,
+    list: "/storage/5BC3-F5E6/Prerroll/Blooming Flower Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Dancing Butterflies Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Flower Field Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Growing Grass Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Spring Brush Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Summer Splash Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Blooming Flower Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Dancing Butterflies Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Flower Field Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Growing Grass Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Spring Brush Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Summer Splash Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Blooming Flower Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Dancing Butterflies Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Flower Field Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Growing Grass Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Spring Brush Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Summer Splash Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/COVID-19 Google Stay the Fuck Home Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/TV Glitch Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/COVID-19 Google Stay the Fuck Home Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Retro CBS Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Green Energy Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/THX Deep Note.mp4;/storage/5BC3-F5E6/Prerroll/TV Glitch Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Up Movie Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Piracy. It's a crime. Universal Pre-roll_1080_H264;/storage/5BC3-F5E6/Prerroll/Shape Filling Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Vibrant Plex Pre-Roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Outrun Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Uber VHS Style Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Up Movie Plex Pre-roll_1080_H264.mp4",
+  },
+  {
+    startMonth: 9,
+    startDay: 1,
+    endMonth: 9,
+    endDay: 30,
+    list: "/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Liquid Glitch Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/TV Glitch Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Up Movie Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/DVD Feature Presentation Universal Pre-roll_480_H264.mp4;/storage/5BC3-F5E6/Prerroll/Marvel V2 Shortened Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/DVD Feature Presentation Universal Pre-roll_480_H264.mp4;/storage/5BC3-F5E6/Prerroll/HBO Static Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Liquid Glitch Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/Marvel V2 Shortened Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Modern Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Outrun Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Up Movie Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Cartoon Ink Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Outrun Plex Pre-roll_1080_H264.mp4",
+  },
+  {
+    startMonth: 10,
+    startDay: 1,
+    endMonth: 10,
+    endDay: 31,
+    list: "/storage/5BC3-F5E6/Prerroll/Garage Screams Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V01 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V02 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V03 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V04 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V05 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V06 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V07 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V08 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Spider Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/Happy Halloween Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Horror Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Horror Trailer Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Monster Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Slender Man Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Spooky Halloween Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Vampire Bats Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Zombies Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Garage Screams Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V01 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V02 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V03 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V04 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V05 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V06 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V07 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Pack V08 Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Halloween Spider Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/Happy Halloween Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Horror Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Horror Trailer Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Monster Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Slender Man Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Spooky Halloween Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Vampire Bats Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Zombies Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/COVID-19 Google Stay the Fuck Home Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Disney Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Liquid Glitch Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/Disney Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Shape Filling Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Retro VHS Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Shape Filling Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Outrun Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Vibrant Plex Pre-Roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/COVID-19 Google Stay the Fuck Home Plex Pre-roll_1080_H264.mp4",
+  },
+  {
+    startMonth: 11,
+    startDay: 1,
+    endMonth: 11,
+    endDay: 30,
+    list: "/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Happy Thanksgiving Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Happy Thanksgiving Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Happy Thanksgiving Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Happy Thanksgiving Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Happy Thanksgiving Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Happy Thanksgiving Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Fall Fox Plex Pre-roll (1).mp4;/storage/5BC3-F5E6/Prerroll/Happy Thanksgiving Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/DVD Feature Presentation Universal Pre-roll_480_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex McDonalds Preroll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Hulu Originals_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/DVD Feature Presentation Universal Pre-roll_480_H264.mp4;/storage/5BC3-F5E6/Prerroll/Piracy. It's a crime. Universal Pre-roll_1080_H264;/storage/5BC3-F5E6/Prerroll/Retro CBS Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Outrun Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Laser Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Monkey Island Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Vibrant Plex Pre-Roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Piracy. It's a crime. Universal Pre-roll_1080_H264;/storage/5BC3-F5E6/Prerroll/Old Theater Film Intro Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Developer Coding Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/DVD Feature Presentation Universal Pre-roll_480_H264.mp4",
+  },
+  {
+    startMonth: 12,
+    startDay: 1,
+    endMonth: 12,
+    endDay: 25,
+    list: "/storage/5BC3-F5E6/Prerroll/Christmas Ornaments Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Christmas Train Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Christmas Tree Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Colorful Lights Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Disney Christmas Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Gingerbread Men Dance Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Glitter Merry Christmas Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Glitter Santa Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Glitter Tree Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Holiday Sweater Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Magic Christmas Tree Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Melting Snow Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Merry Christmas Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Magic Snow_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Santa Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Snowflakes Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Snowman Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Forest LoFi Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Ice Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter is Coming Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Snow Plex Pre-roll_1440_H264.mp4;/storage/5BC3-F5E6/Prerroll/Christmas Ornaments Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Christmas Train Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Christmas Tree Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Colorful Lights Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Disney Christmas Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Gingerbread Men Dance Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Glitter Merry Christmas Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Glitter Santa Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Glitter Tree Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Holiday Sweater Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Magic Christmas Tree Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Melting Snow Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Merry Christmas Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Magic Snow_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Santa Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Snowflakes Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Snowman Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Forest LoFi Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Ice Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter is Coming Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Winter Snow Plex Pre-roll_1440_H264.mp4;/storage/5BC3-F5E6/Prerroll/Old Theater Film Intro Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/21st Century Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Shape Filling Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Disney Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Retro CBS Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Studios_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Modern Plex Pre-roll.mp4",
+  },
+];
 
-const URLS = {
-  GET_COLUMNS: "columns",
-  GET_ROWS: "rows",
-  BREAKFAST:
-    "gAAAAABjM1BWVR9rh26DVi1VwazvCAn3VcMZPk-WKTWRGe-4ENSJYvp-exroElxYzlXNY6CdDFL2d9gcfvdF4m2tmUbv7zbYt-9I7Ze3CWdT-b-Ri29ZfQNqOUiugFcW5VvZDewvFhBjFwOU9-pRZJUg1I8nHRW_FnBHJskYCF1urFfctEOJiew=",
-  LUNCH:
-    "gAAAAABjNb7hVmybvIYCcrQXaZfSdNjTgXtC7xpPreb4vYDoaUYjn2nIfJ-fwmG35Ur2eF9bSBuyWgs7lHQc_zI2J8jAD8OAsf_f7iyYPE1Y0V-ALWXTuEumxQmtj2X4ofw0qvsBcclwJWANCUC3Fm7y7LXcnNclqmPVal8EkJgz20WqoRRg9po=",
-  DINNER:
-    "gAAAAABjNb7ncdcdGbbhLai8ljRMYasxQ_gPhpgSCtaS3l4QweWCl5o58Ug3bK-SvlPt_HNoSxh8S-rISGwtbVPeuPSiXYDV7vHBKiLPi7MsMBqBvDBt5gfW00J3NqcHhmmksutFcF3lGsHYydtwmI_O_a5oFMvljVZxJ-WPoAMeRU5VR1gxl0o=",
-  ACTION:
-    "gAAAAABjNb9heb0AimDOMlvn0hy7wWGJ1sZGgZaBC2dUx9SuLMkpUsumLmMMjaoao0NlcjRh1ufeYSconciBweqbjZbPZGeydVN2BU6ruF2JYyIi41c2TDc6CbylJQq0jOo9mLmiD00HBwkfv_eTvq9ZtuYqi_5oEh2cqzAb6TwROkwM1kN1O5M=",
+const DEFAULT_LIST =
+  "/storage/5BC3-F5E6/Prerroll/21st Century Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Cartoon Ink Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/COVID-19 Google Stay the Fuck Home Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Developer Coding Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Disney Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/DVD Feature Presentation Universal Pre-roll_480_H264.mp4;/storage/5BC3-F5E6/Prerroll/Elegant Short Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/Green Energy Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/HBO Static Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Laser Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Liquid Glitch Plex Pre-roll_2160_H264.mp4;/storage/5BC3-F5E6/Prerroll/Marvel V2 Shortened Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Modern Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Monkey Island Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Old Theater Film Intro Plex Pre-roll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Outrun Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Piracy. It's a crime. Universal Pre-roll_1080_H264;/storage/5BC3-F5E6/Prerroll/Plex Hulu Originals_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex McDonalds Preroll_720_H264.mp4;/storage/5BC3-F5E6/Prerroll/Plex Studios_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Retro CBS Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Retro VHS Plex Pre-roll.mp4;/storage/5BC3-F5E6/Prerroll/Shape Filling Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/THX Deep Note.mp4;/storage/5BC3-F5E6/Prerroll/TV Glitch Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Uber VHS Style Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Up Movie Plex Pre-roll_1080_H264.mp4;/storage/5BC3-F5E6/Prerroll/Vibrant Plex Pre-Roll_1080_H264.mp4";
+
+const isBetweenDates = (preRollObject) => {
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth();
+  const currentDay = now.getDay();
+  const isJanuary = now.getMonth() === 0;
+  const startYear =
+    preRollObject.startMonth < preRollObject.endMonth
+      ? currentYear - (isJanuary ? 1 : 0)
+      : currentYear;
+  const endYear =
+    preRollObject.startMonth < preRollObject.endMonth
+      ? currentYear + (!isJanuary ? 1 : 0)
+      : currentYear;
+
+  var from = new Date(
+    startYear,
+    preRollObject.startMonth - 1,
+    preRollObject.startDay
+  ); // -1 because months are from 0 to 11
+  var to = new Date(endYear, preRollObject.endMonth - 1, preRollObject.endDay);
+  var check = new Date(currentYear, currentMonth, currentDay);
+
+  return check > from && check < to;
 };
 
 const BASE_URLS = {
-  CODA: "https://coda.io/apis/v1/docs/Z73AjdCK_A/tables/grid--PMhbfCDXg/",
-  HA: "https://hooks.nabu.casa/",
+  PLEX: "https://192-168-50-117.f87b00f414364572a60b2476835b44de.plex.direct:32400/:/prefs",
 };
 
 const options = {
-  headers: {
-    Authorization,
-    "content-type": "application/json;charset=UTF-8",
-  },
+  method: "PUT",
+  headers: {},
 };
-
-const MEALS = ["breakfast", "lunch", "dinner", "action"];
 
 /**
  * gatherResponse awaits and returns a response body as a string.
@@ -78,33 +159,42 @@ const runHandler = async (
   env: Env,
   ctx: ExecutionContext
 ): Promise<any> => {
-  const columns = await getJSON(`${BASE_URLS.CODA}${URLS.GET_COLUMNS}`);
-  console.log(columns);
-  const columnNames: any = {};
+  const requestUrl = new URL(BASE_URLS.PLEX);
 
-  const rows = await getJSON(`${BASE_URLS.CODA}${URLS.GET_ROWS}`);
-  console.log(rows.items[0].values);
-  const data: any = {};
-  await Promise.all(
-    MEALS.map(async (meal) => {
-      columnNames[meal] = columns.items.find(
-        (item: any) => item.name === meal
-      ).id;
-      data[meal] = rows.items[0].values[columnNames[meal]]
-        .split("\n")
-        .join("<br/><br/>")
-        .split(",")
-        .join("<br/>");
-      console.log(data[meal].length);
-      const mealData = new URLSearchParams();
-      mealData.append("data", data[meal].substring(0, 255));
-      await fetch(`${BASE_URLS.HA}${URLS[meal.toUpperCase()]}`, {
-        method: "POST",
-        body: mealData,
-      });
-    })
+  var search_params = requestUrl.searchParams;
+
+  let currentListString = DEFAULT_LIST;
+  const currentList = PREROLL_STRINGS.filter((prs) => isBetweenDates(prs))[0];
+  if (currentList) currentListString = currentList.list;
+
+  // new value of "id" is set to "101"
+  search_params.set("X-Plex-Token", "jrs5sGHTx3z84GiDXDVM");
+  search_params.set("CinemaTrailersPrerollID", currentListString);
+
+  search_params.set("X-Plex-Product", "Plex Web");
+  search_params.set("X-Plex-Version", "4.93.3");
+  search_params.set("X-Plex-Client-Identifier", "m6s57jz3zuc7r8c9cb1oj00a");
+  search_params.set("X-Plex-Platform", "Chrome");
+  search_params.set("X-Plex-Platform-Version", "107.0");
+  search_params.set(
+    "X-Plex-Features",
+    "external-media,indirect-media,hub-style-list"
   );
-  return JSON.stringify("success");
+  search_params.set("X-Plex-Model", "hosted");
+  search_params.set("X-Plex-Device", "OSX");
+  search_params.set("X-Plex-Device-Name", "Chrome");
+  search_params.set("X-Plex-Device-Screen-Resolution", "1708x911,2056x1329");
+  search_params.set("X-Plex-Language", "en");
+
+  // change the search property of the main url
+  requestUrl.search = search_params.toString();
+
+  // the new url string
+  var finalUrl = requestUrl.toString();
+
+  await getJSON(finalUrl);
+
+  return JSON.stringify({ success: true });
 };
 
 export default {
