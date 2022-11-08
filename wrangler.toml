@@ -1,0 +1,7 @@
+name = "wrangler-coda-ha"
+main = "src/index.ts"
+compatibility_date = "2022-09-29"
+node_compat = true
+
+[triggers]
+crons = [ "2/15 * * * *" ]
